@@ -27,7 +27,7 @@ def extract_text_from_txt(file_path):
         return f.read()
 
 def extract_text_from_image(file_path):
-    img = cv2.imread(file_path)
+    img = Image.open(file_path)
     text = pytesseract.image_to_string(img)
     return text
 
